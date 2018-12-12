@@ -4,4 +4,20 @@
     <dimen name="detail_body_text_size">20sp</dimen>
     <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
     <dimen name="fab_margin">24dp</dimen>
+    <dimen name="img_height">300dp</dimen>
+    <dimen name="bar_height">56dp</dimen>
+    <dimen name="app_bar_height">150dp</dimen>
+    <dimen name="app_bar_elv">8dp</dimen>
+    <dimen name="scroll_Topmargin">50dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="fab_press_elevation">12dp</dimen>
+
+
+
+    <!-- detail -->
+
+
+
+
+
 </resources>
