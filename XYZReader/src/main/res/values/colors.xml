@@ -19,8 +19,8 @@
     <color name="photo_placeholder">#ccc</color>
 
     <color name="theme_primary">#04561A</color>
-    <color name="primary_900">#233656</color>
-    <color name="primary_600">#ffffff</color>
+    <color name="primary_900">#142748</color>
+    <color name="primary_600">#233656 </color>
 
     <color name="accent_color">#EEF4F2</color>
     <color name="accent_200">#CDD6D5</color>

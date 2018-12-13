@@ -20,6 +20,7 @@
         android:fitsSystemWindows="true"
         app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed"
         app:contentScrim="@color/primary_900"
+
     >
 
         <ImageView
@@ -77,13 +78,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/body_size"
-                    tools:text="some text" />
+                    tools:text="some text"
+                    android:layout_margin="@dimen/text_margin"
+
+                    />
 
                 <TextView
                     android:id="@+id/article_byline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="atricle by line " />
+                    tools:text="atricle by line "
+                    android:layout_margin="@dimen/text_margin"
+
+                    />
 
             </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
@@ -107,6 +114,7 @@
         android:contentDescription="@string/action_share"
         android:src="@drawable/ic_share"
         app:elevation="@dimen/fab_elevation"
+        android:layout_margin="@dimen/fab_margin"
         android:stateListAnimator="@animator/fab_state_list_anim"
         app:fabSize="normal" />
 

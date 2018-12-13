@@ -2,6 +2,7 @@ package com.example.xyzreader.ui;
 
 import android.app.Fragment;
 import android.app.LoaderManager;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -9,6 +10,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 
+import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -80,6 +82,16 @@ public class ArticleDetailFragment extends Fragment implements
         loadingPb = mRootView.findViewById(R.id.loading_pb);
 
         mBylineView.setMovementMethod(new LinkMovementMethod());
+
+        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
+                        .setType("text/plain")
+                        .setText("Some sample text")
+                        .getIntent(), getString(R.string.action_share)));
+            }
+        });
 
         getActivityCast().setSupportActionBar((Toolbar) mRootView.findViewById(R.id.toolbar));
         getActivityCast().getSupportActionBar().setDisplayHomeAsUpEnabled(false);
@@ -172,7 +184,9 @@ public class ArticleDetailFragment extends Fragment implements
                                 + "</font>"));
 
             }
-            mBodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY).replaceAll("(\r\n|\n)", "<br />")));
+            mBodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)
+                    .substring(0,1000)
+                    .replaceAll("(\r\n|\n)", "<br />")));
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
                         @Override

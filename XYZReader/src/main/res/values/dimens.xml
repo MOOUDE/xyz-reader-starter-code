@@ -16,12 +16,13 @@
     <dimen name="title_leaft_margin">55dp</dimen>
 
     <dimen name="fab_press_translation_z">6dp</dimen>
-    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
     <dimen name="img_height">300dp</dimen>
     <dimen name="bar_height">56dp</dimen>
     <dimen name="app_bar_height">250dp</dimen>
     <dimen name="app_bar_elv">8dp</dimen>
     <dimen name="scroll_Topmargin">50dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 
 
 
